@@ -6,14 +6,16 @@
 
 import { Routes, Route } from "react-router-dom";
 import Main from "../screens/main/Main";
-import Cats from "../components/cats/Cats.component";
+import AllPets from "../pages/AllPets.page";
+import BuyNow from "../pages/BuyNow";
 
 const AppRouter = () => {
   return (
     <Routes>
       {/* Public Route */}
       <Route path="/" element={<Main />} />
-      <Route path="/all-cats" element={<Cats />} />
+      <Route path="/all-pets" element={<AllPets />} />
+      <Route path="/buy-now" element={<BuyNow />} />
     </Routes>
   );
 };

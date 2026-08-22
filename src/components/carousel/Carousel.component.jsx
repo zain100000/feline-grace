@@ -7,7 +7,7 @@
 
 import { useCallback, useEffect, useState, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { heroSlides } from "../../constants/Cats.constant.hero";
+import { heroSlides } from "../../constants/data.constant.hero";
 import Button from "../../utils/button/Button.util";
 
 const HeroCarousel = ({ onExplore }) => {
@@ -79,9 +79,12 @@ const HeroCarousel = ({ onExplore }) => {
             <img
               src={slide.image}
               alt={slide.title}
-              className={`w-full h-full object-cover ${
+              // Added: sharper rendering, centered object, and disabled drag/pointer events for better visual quality
+              className={`w-full h-full object-cover object-center select-none pointer-events-none ${
                 index === current ? "animate-slow-zoom" : ""
               }`}
+              style={{ imageRendering: "-webkit-optimize-contrast" }}
+              draggable="false"
             />
           </div>
 

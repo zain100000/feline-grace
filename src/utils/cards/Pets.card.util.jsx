@@ -1,18 +1,18 @@
 /**
- * @file CatCard.util.jsx
- * @module utils/CatCard
+ * @file PetCard.util.jsx
+ * @module utils/PetCard
  * @description Luxury card util displaying companion details with subtle shadow elevations, image zoom dynamics, and gold accents.
  */
 
 import React from "react";
 
 /**
- * CatCard util
+ * PetCard util
  * @param {Object} props
- * @param {Object} props.cat - Individual cat data object from constants
+ * @param {Object} props.pet - Individual pet data object from constants (cat or dog)
  */
-const CatCard = ({ cat }) => {
-  const { name, breed, origin, image, description, stats, tags } = cat;
+const PetCard = ({ pet }) => {
+  const { name, breed, origin, image, description, stats, tags } = pet;
 
   return (
     <div className="group relative flex flex-col bg-[#FAF8F5] rounded-3xl overflow-hidden border border-[#EBE7E0]/80 shadow-sm hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500 ease-out max-w-sm w-full mx-auto">
@@ -23,7 +23,7 @@ const CatCard = ({ cat }) => {
       <div className="relative h-72 w-full overflow-hidden bg-[#F4F1EA]">
         <img
           src={image}
-          alt={name}
+          alt={`${name} - ${breed}`}
           className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-108"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -36,7 +36,7 @@ const CatCard = ({ cat }) => {
           {breed}
         </span>
 
-        {/* Cat Name */}
+        {/* Pet Name */}
         <h3 className="font-serif text-3xl font-medium text-[var(--primary)] mb-3 group-hover:text-[var(--secondary)] transition-colors duration-300">
           {name}
         </h3>
@@ -86,13 +86,13 @@ const CatCard = ({ cat }) => {
           ))}
         </div>
 
-        {/* Interactive Learn More Button */}
+        {/* Interactive Learn More Button
         <button className="relative overflow-hidden mt-auto w-full py-3.5 border border-[var(--secondary)] text-xs font-semibold tracking-[0.2em] text-[var(--primary)] uppercase transition-all duration-300 group-hover:bg-[var(--secondary)] group-hover:text-white group-hover:shadow-md">
           Learn More
-        </button>
+        </button> */}
       </div>
     </div>
   );
 };
 
-export default CatCard;
+export default PetCard;

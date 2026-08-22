@@ -1,26 +1,27 @@
 /**
  * @file Collection.component.jsx
  * @module Components/Collection
- * @description Collection section displaying the first 3 featured companions from the cats constants data.
+ * @description Collection section displaying the first 3 featured companions from both the cats and dogs constants data.
  */
 
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import CatCard from "../../utils/cards/Cat.card.util";
-import { cats } from "../../constants/Cats.constant.hero";
+import PetCard from "../../utils/cards/Pets.card.util"; 
+import { cats, dogs } from "../../constants/data.constant.hero";
 
 const Collection = () => {
   const navigate = useNavigate();
 
-  // Display only the first 3 cats from constants
-  const featuredCats = cats.slice(0, 3);
+  // FIX 2: Combine cats and dogs data and display only the first 3 overall
+  const allPets = [...cats, ...dogs];
+  const featuredPets = allPets.slice(0, 3);
 
   const handleViewAll = () => {
-    navigate("/all-cats");
+    navigate("/all-pets");
   };
 
   return (
-    <section className="py-24 px-6 bg-[var(--tertiary)] flex flex-col items-center">
+    <section className="px-6 bg-[var(--tertiary)] flex flex-col items-center">
       <div className="max-w-6xl w-full mx-auto">
         {/* Header Bar */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
@@ -43,8 +44,9 @@ const Collection = () => {
 
         {/* 3-Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
-          {featuredCats.map((cat) => (
-            <CatCard key={cat.id} cat={cat} />
+          {/* FIX 3: Pass the entire pet object as the 'pet' prop */}
+          {featuredPets.map((pet) => (
+            <PetCard key={pet.id} pet={pet} />
           ))}
         </div>
       </div>
@@ -52,4 +54,4 @@ const Collection = () => {
   );
 };
 
-export default Collection
+export default Collection;

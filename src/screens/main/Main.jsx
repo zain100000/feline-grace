@@ -17,7 +17,7 @@ const Main = () => {
   const navigate = useNavigate();
 
   const handleExplore = () => {
-    navigate("/all-cats");
+    navigate("/all-pets");
   };
 
   return (
@@ -28,14 +28,14 @@ const Main = () => {
         <HeroCarousel onExplore={handleExplore} />
       </main>
 
-      <section id="purpose" className="py-20 px-4 md:px-8">
+      <section id="purpose" className="py-4 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
           <Purpose />
         </div>
       </section>
 
       {/* Collection Section - Now always shows featured cats */}
-      <section id="cats" className="py-20 px-4 md:px-8">
+      <section className="px-6 py-4 bg-[var(--tertiary)] flex flex-col items-center">
         <div className="max-w-7xl mx-auto">
           <Collection />
         </div>

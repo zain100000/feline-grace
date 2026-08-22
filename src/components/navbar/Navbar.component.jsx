@@ -5,17 +5,19 @@
  */
 
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "../../utils/button/Button.util.jsx";
 import logoImg from "../../assets/logo/logo.png";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("HOME");
   const [isScrolled, setIsScrolled] = useState(false);
 
   const navLinks = [
     { name: "HOME", href: "#home" },
-    { name: "CATS", href: "#cats" },
+    { name: "COLLECTION", href: "#collection" },
     { name: "CONTACT", href: "#contact" },
   ];
 
@@ -33,6 +35,11 @@ const Navbar = () => {
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
+  };
+
+  const handleBuyNow = () => {
+    closeMobileMenu();
+    navigate("/buy-now");
   };
 
   return (
@@ -88,7 +95,7 @@ const Navbar = () => {
           <Button
             title="Buy Now"
             size="sm"
-            onPress={() => console.log("Join the club clicked")}
+            onPress={handleBuyNow}
             className="!rounded-full !border !border-[var(--secondary)] !bg-transparent !text-[var(--secondary)] !font-semibold !tracking-wider !px-5 !py-2 !text-xs !min-h-0 hover:!bg-[var(--secondary)] hover:!text-[var(--tertiary)] transition-all duration-300"
           />
         </div>
@@ -120,19 +127,16 @@ const Navbar = () => {
             className="relative w-8 h-8 flex items-center justify-center focus:outline-none"
           >
             <div className="relative w-6 h-5">
-              {/* Top bar */}
               <span
                 className={`absolute left-0 top-0 w-5 h-0.5 bg-[var(--primary)] rounded-full transition-all duration-300 ${
                   isMobileMenuOpen ? "rotate-45 top-2" : ""
                 }`}
               />
-              {/* Middle bar */}
               <span
                 className={`absolute left-0 top-2 w-5 h-0.5 bg-[var(--primary)] rounded-full transition-all duration-300 ${
                   isMobileMenuOpen ? "opacity-0" : ""
                 }`}
               />
-              {/* Bottom bar */}
               <span
                 className={`absolute left-0 bottom-0 w-5 h-0.5 bg-[var(--primary)] rounded-full transition-all duration-300 ${
                   isMobileMenuOpen ? "-rotate-45 bottom-2" : ""
@@ -179,13 +183,10 @@ const Navbar = () => {
 
             <div className="mt-4 pt-4 border-t border-[var(--gray)]">
               <Button
-                title="Buy "
+                title="Buy Now"
                 size="md"
                 width="100%"
-                onPress={() => {
-                  console.log("Join the club clicked");
-                  closeMobileMenu();
-                }}
+                onPress={handleBuyNow}
                 className="!rounded-full !border !border-[var(--secondary)] !bg-transparent !text-[var(--secondary)] !font-semibold !tracking-wider !text-xs hover:!bg-[var(--secondary)] hover:!text-[var(--tertiary)] transition-all duration-300"
               />
             </div>
@@ -193,7 +194,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Keyframe animations for mobile menu items */}
       <style>{`
         @keyframes slideIn {
           from {

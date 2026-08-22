@@ -5,12 +5,12 @@
  */
 
 import React from "react";
-import CatCard from "../../utils/cards/Cat.card.util.jsx";
-import { cats } from "../../constants/Cats.constant.hero.jsx";
+import PetCard from "../../utils/cards/Pets.card.util.jsx";
+import { cats } from "../../constants/data.constant.hero.jsx";
 
-const Cats = () => {
+const Pets = () => {
   return (
-    <section id="cats" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section id="pets" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       {/* Section Header */}
       <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
         <span className="text-xs uppercase tracking-[0.3em] font-semibold text-[var(--secondary)]">
@@ -29,11 +29,11 @@ const Cats = () => {
       {/* Grid Layout displaying all cats */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
         {cats.map((cat) => (
-          <CatCard key={cat.id} cat={cat} />
+          <PetCard key={cat.id} pet={cat} />
         ))}
       </div>
     </section>
   );
 };
 
-export default Cats;
+export default Pets;
