@@ -61,6 +61,7 @@ export const cats = [
     name: "Savannah",
     breed: "Savannah Cat",
     origin: "United States",
+    price: "AED 8,500",
     image: savannahImg,
     description:
       "An exotic mosaic of wild beauty and domestic grace, this Savannah cat features a stunning gold coat marked with bold black spots. By its regal posture and tall, alert ears, it brings an untamed, aristocratic presence right into the home.",
@@ -77,6 +78,7 @@ export const cats = [
     name: "Blue",
     breed: "British Shorthair",
     origin: "United Kingdom",
+    price: "AED 3,600",
     image: britishBlueImg,
     description:
       "The classic 'teddy bear' of the feline world, this Blue British Shorthair is celebrated for its plush, dense coat and large, round, copper-blue eyes. Its calm, dignified demeanor makes it the ultimate low-maintenance, high-affection lap companion.",
@@ -93,6 +95,7 @@ export const cats = [
     name: "Goldie",
     breed: "British Shorthair (Golden)",
     origin: "United Kingdom",
+    price: "AED 4,200",
     image: britishGoldenImg,
     description:
       "Bathed in warm golden hues, this British Shorthair features a dense, plush coat that perfectly frames its iconic round face and mesmerizing aqua-blue eyes. It is a gentle, independent soul that enjoys quiet observation and cozy cuddles.",
@@ -109,6 +112,7 @@ export const cats = [
     name: "Ragdoll Blue Point",
     breed: "Ragdoll",
     origin: "United States",
+    price: "AED 4,500",
     image: ragdollBlueImg,
     description:
       "A testament to softness, this blue-point Ragdoll is famous for its fluffy, non-matting semi-longhair coat and striking blue eyes. Known for their docile nature and tendency to go limp when picked up, they are the ultimate 'puppy cat' companions.",
@@ -125,6 +129,7 @@ export const cats = [
     name: "Persian White",
     breed: "Persian",
     origin: "Iran (Persia)",
+    price: "AED 2,800",
     image: persianWhiteImg,
     description:
       "A vision of pristine, fluffy luxury, this white Persian cat embodies centuries of aristocratic breeding. With its flowing silken coat and serene, doll-like expression, it is the quintessential companion of connoisseurs who value tranquility and grace.",
@@ -141,6 +146,7 @@ export const cats = [
     name: "Ragdoll Seal Point Kitten",
     breed: "Ragdoll",
     origin: "United States",
+    price: "AED 4,000",
     image: ragdollSealImg,
     description:
       "Fragile and utterly adorable, this sleeping seal-point Ragdoll kitten is a tiny cloud of cream fur with dark-pointed ears. Its deeply relaxed and trusting nature is a hallmark of the breed, promising a lifetime of gentle companionship.",
@@ -157,6 +163,7 @@ export const cats = [
     name: "Ragdoll Blue Point Kitten",
     breed: "Ragdoll",
     origin: "United States",
+    price: "AED 4,200",
     image: ragdollBlueKittenImg,
     description:
       "With oversized, expressive sapphire eyes, this Ragdoll kitten exudes innocent charm. Its distinctive white 'mask' and soft grey points blend beautifully with its fluffy coat, making it a stunning and cuddly companion for any home.",
@@ -173,6 +180,7 @@ export const cats = [
     name: "Orange Tabby",
     breed: "Domestic Shorthair",
     origin: "Worldwide",
+    price: "AED 1,500",
     image: orangeTabbyImg,
     description:
       "A portrait of absolute comfort, this ginger and white tabby cat shows off delightful, pink toe beans while sleeping soundly. They are playful, spirited companions with a famous sunny disposition that brings warmth and joy to any household.",
@@ -189,6 +197,7 @@ export const cats = [
     name: "Ragdoll Blue Bicolor",
     breed: "Ragdoll",
     origin: "United States",
+    price: "AED 4,800",
     image: ragdollBicolorImg,
     description:
       "An outdoor vision of sheer elegance, this blue bicolor Ragdoll is a masterpiece of symmetry and fluff. With its stunning, vivid blue eyes and picture-perfect white markings, it combines gentle, laid-back affection with show-stopping beauty.",
@@ -209,6 +218,7 @@ export const dogs = [
     name: "Merle",
     breed: "Dachshund (Longhaired Dapple)",
     origin: "Germany",
+    price: "AED 5,500",
     image: dachshundImg,
     description:
       "An enchanting blend of playful charm and regal elegance, this miniature longhaired Dachshund captivates with its striking silver-dapple coat and soulful, expressive eyes. With its signature stubby legs and silky, feathered ears, it is a spirited and affectionate companion wrapped in a tiny, luxurious package.",
@@ -225,6 +235,7 @@ export const dogs = [
     name: "Husky",
     breed: "Siberian Husky (Red & White)",
     origin: "Siberia, Russia",
+    price: "AED 6,000",
     image: huskyImg,
     description:
       "A striking vision of Arctic vitality, this red and white Husky radiates an infectious, joyous energy. With its wolf-like features, distinct russet coat, and gleeful smile, it is a highly spirited and sociable breed bred for endurance and pack life.",
@@ -241,6 +252,7 @@ export const dogs = [
     name: "Goldens",
     breed: "Golden Retriever Puppies",
     origin: "Scotland",
+    price: "AED 6,500",
     image: goldenImg,
     description:
       "Bundles of sunshine and boundless affection, these Golden Retriever puppies are the epitome of canine warmth. With their wavy, pale-gold fur and floppy ears, they are famously eager to please, possessing a gentle temperament that makes them ideal family companions.",
@@ -257,6 +269,7 @@ export const dogs = [
     name: "Malamute Puppy",
     breed: "Alaskan Malamute Puppy",
     origin: "Alaska, USA",
+    price: "AED 7,200",
     image: malamuteImg,
     description:
       "A formidable bundle of fluff with a heart of gold, this Alaskan Malamute puppy exudes future strength wrapped in puppy innocence. With its thick, wooly cream and sable coat and striking masked face, it is a deeply loyal and powerful working breed.",
@@ -273,6 +286,7 @@ export const dogs = [
     name: "Poodle",
     breed: "Poodle (Toy / Miniature)",
     origin: "Germany / France",
+    price: "AED 5,000",
     image: poodleImg,
     description:
       "An intelligent aristocrat in a curly, hypoallergenic coat, this red/apricot Poodle puppy is both dazzling and highly trainable. Its bright, dark eyes and dense, crimped fur speak to a breed known for high intellect and a distinctively loyal personality.",

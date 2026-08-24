@@ -4,9 +4,9 @@
  * @description Collection section displaying the first 3 featured companions from both the cats and dogs constants data.
  */
 
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import PetCard from "../../utils/cards/Pets.card.util"; 
+import PetCard from "../../utils/cards/Pets.card.util";
 import { cats, dogs } from "../../constants/data.constant.hero";
 
 const Collection = () => {
@@ -21,7 +21,10 @@ const Collection = () => {
   };
 
   return (
-    <section className="px-6 bg-[var(--tertiary)] flex flex-col items-center">
+    <section
+      className="px-6 bg-[var(--tertiary)] flex flex-col items-center"
+      id="collection"
+    >
       <div className="max-w-6xl w-full mx-auto">
         {/* Header Bar */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
