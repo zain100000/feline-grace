@@ -67,11 +67,10 @@ const BuyNow = () => {
 
   const bankDetails = {
     bankName: "Zand Bank P.J.S.C.",
-    accountTitle: "MOHAMMAD ALAU SHAHEB ALI",
-    accountNumber: "1002432142134225",
-    iban: "AE330961002432142134225",
+    accountTitle: "MUNEEB DILDAR DILDAR HUSSAIN",
+    accountNumber: "10024321422309408",
+    iban: "AE7309610024321422309408",
     swiftCode: "ZANDAEAA",
-    companyTRN: "100492810300003", // Business Tax Registration Number
     branch: "Emaar Square, Building 6, Level 1 - Dubai",
   };
 
@@ -233,13 +232,7 @@ const BuyNow = () => {
                   </div>
                 </div>
 
-                <div className="p-3 bg-stone-50 rounded-xl border border-stone-200 text-[10px] text-stone-500 space-y-1">
-                  <div className="flex justify-between">
-                    <span>Tax Registration No (TRN):</span>
-                    <span className="font-mono font-bold text-stone-700">
-                      {bankDetails.companyTRN}
-                    </span>
-                  </div>
+                <div className="p-3 bg-stone-50 rounded-xl border border-stone-200 text-[10px] text-stone-500 space-y-1">                 
                   <p className="italic">
                     * All prices are subject to 5% Value Added Tax in accordance
                     with UAE Federal Decree-Law No. (8).
