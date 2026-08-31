@@ -1,10 +1,8 @@
 import React from "react";
 import PetCard from "../utils/cards/Pets.card.util";
-import { cats, dogs } from "../constants/data.constant.hero";
+import { cats } from "../constants/data.constant.hero";
 
 const AllPets = () => {
-  const allPets = [...cats, ...dogs];
-
   return (
     <div className="container mx-auto py-12">
       <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
@@ -18,7 +16,7 @@ const AllPets = () => {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {allPets.map((pet) => (
+        {cats.map((pet) => (
           <PetCard key={pet.id} pet={pet} />
         ))}
       </div>

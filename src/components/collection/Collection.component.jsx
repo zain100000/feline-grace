@@ -1,20 +1,19 @@
 /**
  * @file Collection.component.jsx
  * @module Components/Collection
- * @description Collection section displaying the first 3 featured companions from both the cats and dogs constants data.
+ * @description Collection section displaying the first 3 featured companions from the cats constants data.
  */
 
-import React, { useEffect } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import PetCard from "../../utils/cards/Pets.card.util";
-import { cats, dogs } from "../../constants/data.constant.hero";
+import { cats } from "../../constants/data.constant.hero";
 
 const Collection = () => {
   const navigate = useNavigate();
 
-  // FIX 2: Combine cats and dogs data and display only the first 3 overall
-  const allPets = [...cats, ...dogs];
-  const featuredPets = allPets.slice(0, 3);
+  // Display only the first 3 cats from the collection
+  const featuredPets = cats.slice(0, 3);
 
   const handleViewAll = () => {
     navigate("/all-pets");
@@ -47,7 +46,6 @@ const Collection = () => {
 
         {/* 3-Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
-          {/* FIX 3: Pass the entire pet object as the 'pet' prop */}
           {featuredPets.map((pet) => (
             <PetCard key={pet.id} pet={pet} />
           ))}
